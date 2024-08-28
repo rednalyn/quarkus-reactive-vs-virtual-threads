@@ -1,0 +1,9 @@
+@startuml
+participant Gatling as Gatling
+participant serviceA as ServiceA
+database Database as Database
+Gatling -> ServiceA : Initiate load test towards reactive/virtual threads endpoint
+ServiceA -> Database : Save
+ServiceA -> ServiceA : Rest Request
+ServiceA -> ServiceA : Annan operation?
+@enduml
